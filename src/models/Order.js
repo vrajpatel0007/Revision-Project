@@ -11,11 +11,11 @@ const orderschema = new mongoose.Schema(
             trim: true,
         },
         totalAmount: {
-            type: Number,
+            type: String,
             required: true,
         },
         orderDate: {
-            type: Date,
+            type: String,
             default: null,
         },
         product: {
@@ -24,3 +24,6 @@ const orderschema = new mongoose.Schema(
         }
     }
 )
+
+const Order = mongoose.model("Order", orderschema);
+module.exports = Order ;
